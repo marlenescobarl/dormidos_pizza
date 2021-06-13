@@ -49,7 +49,7 @@ public class Administracion extends javax.swing.JFrame {
         getContentPane().add(jLabel_sucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 100, 30));
 
         jComboBox_sucursal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox_sucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 230, 50));
+        getContentPane().add(jComboBox_sucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 230, 30));
 
         jLabel_precio.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
         jLabel_precio.setText("PRECIO");

@@ -70,7 +70,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jButton_administracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 160, 50));
 
         jButton_ordenes.setText("ORDENES");
+        jButton_ordenes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ordenesActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 160, 50));
+
+        jLabel_fondo.setBackground(new java.awt.Color(255, 255, 204));
         getContentPane().add(jLabel_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 390));
 
         pack();
@@ -82,6 +89,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         Administracion administracion = new Administracion();
         administracion.setVisible(true);
     }//GEN-LAST:event_jButton_administracionActionPerformed
+
+    private void jButton_ordenesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ordenesActionPerformed
+        
+        //CONEXION DE VENTANAS
+        Ordenes ordenes = new Ordenes();
+        ordenes.setVisible(true);
+    }//GEN-LAST:event_jButton_ordenesActionPerformed
 
     /**
      * @param args the command line arguments

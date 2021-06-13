@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dormidos_pizza;
 
-/**
- *
- * @author escobarlima
- */
+import javax.swing.WindowConstants;
+
+
 public class Ordenes extends javax.swing.JFrame {
 
     /**
@@ -16,6 +11,12 @@ public class Ordenes extends javax.swing.JFrame {
      */
     public Ordenes() {
         initComponents();
+        
+        setResizable(false);
+        setLocationRelativeTo(null);
+        
+        //evitar que el programa termine al cerrar la ventana
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -27,18 +28,71 @@ public class Ordenes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel_sucursal_ordenes = new javax.swing.JLabel();
+        jComboBox_sucursal_ordenes = new javax.swing.JComboBox<>();
+        jLabel_pizza_ordenes = new javax.swing.JLabel();
+        jComboBox_pizza_ordenes = new javax.swing.JComboBox<>();
+        jLabel_descripcion_ordenes = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea_descripcion_ordenes = new javax.swing.JTextArea();
+        jLabel_precio_ordenes = new javax.swing.JLabel();
+        jButton_ordenar = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable_tabla_ordenes = new javax.swing.JTable();
+        jLabel_fondordenes = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel_sucursal_ordenes.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
+        jLabel_sucursal_ordenes.setText("SUCURSAL");
+        getContentPane().add(jLabel_sucursal_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 100, 30));
+
+        jComboBox_sucursal_ordenes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox_sucursal_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 230, 30));
+
+        jLabel_pizza_ordenes.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
+        jLabel_pizza_ordenes.setText("PIZZA");
+        getContentPane().add(jLabel_pizza_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 100, 30));
+
+        jComboBox_pizza_ordenes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox_pizza_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 230, 30));
+
+        jLabel_descripcion_ordenes.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
+        jLabel_descripcion_ordenes.setText("DESCRIPCION");
+        getContentPane().add(jLabel_descripcion_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 140, 30));
+
+        jTextArea_descripcion_ordenes.setColumns(20);
+        jTextArea_descripcion_ordenes.setRows(5);
+        jScrollPane1.setViewportView(jTextArea_descripcion_ordenes);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 330, 90));
+
+        jLabel_precio_ordenes.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
+        jLabel_precio_ordenes.setText("100.00");
+        getContentPane().add(jLabel_precio_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 100, 30));
+
+        jButton_ordenar.setBackground(new java.awt.Color(255, 153, 102));
+        jButton_ordenar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 15)); // NOI18N
+        jButton_ordenar.setText("ORDENAR");
+        getContentPane().add(jButton_ordenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 120, 40));
+
+        jTable_tabla_ordenes.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
+        jTable_tabla_ordenes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "No.", "PIZZA", "DESCRIPCION", "SUCURSAL"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable_tabla_ordenes);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 470, 130));
+        getContentPane().add(jLabel_fondordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +133,17 @@ public class Ordenes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_ordenar;
+    private javax.swing.JComboBox<String> jComboBox_pizza_ordenes;
+    private javax.swing.JComboBox<String> jComboBox_sucursal_ordenes;
+    private javax.swing.JLabel jLabel_descripcion_ordenes;
+    private javax.swing.JLabel jLabel_fondordenes;
+    private javax.swing.JLabel jLabel_pizza_ordenes;
+    private javax.swing.JLabel jLabel_precio_ordenes;
+    private javax.swing.JLabel jLabel_sucursal_ordenes;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable_tabla_ordenes;
+    private javax.swing.JTextArea jTextArea_descripcion_ordenes;
     // End of variables declaration//GEN-END:variables
 }
