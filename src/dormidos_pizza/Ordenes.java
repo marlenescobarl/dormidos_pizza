@@ -92,7 +92,7 @@ public class Ordenes extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable_tabla_ordenes);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 470, 130));
-        getContentPane().add(jLabel_fondordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 500));
+        getContentPane().add(jLabel_fondordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
