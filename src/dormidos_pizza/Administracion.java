@@ -28,7 +28,6 @@ public class Administracion extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel_sucursal = new javax.swing.JLabel();
-        jComboBox_sucursal = new javax.swing.JComboBox<>();
         jLabel_precio = new javax.swing.JLabel();
         jLabel_pizzaname = new javax.swing.JLabel();
         jLabel_descripcion = new javax.swing.JLabel();
@@ -39,6 +38,7 @@ public class Administracion extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable_tabla = new javax.swing.JTable();
         jButton_crear = new javax.swing.JButton();
+        jComboBox_sucursal = new javax.swing.JComboBox<>();
         jLabel_fondoadmin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,9 +47,6 @@ public class Administracion extends javax.swing.JFrame {
         jLabel_sucursal.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
         jLabel_sucursal.setText("SUCURSAL");
         getContentPane().add(jLabel_sucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 100, 30));
-
-        jComboBox_sucursal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox_sucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 230, 30));
 
         jLabel_precio.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
         jLabel_precio.setText("PRECIO");
@@ -91,10 +88,22 @@ public class Administracion extends javax.swing.JFrame {
         jButton_crear.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 15)); // NOI18N
         jButton_crear.setText("CREAR");
         getContentPane().add(jButton_crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 100, 40));
+
+        jComboBox_sucursal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alta Verapaz", "Baja Verapaz", "Chimaltenango", "Chiquimula", "El Progreso", "Escuintla", "Guatemala", "Huehuetenango", "Izabal", "Jalapa", "Jutiapa", "Petén", "Quetzaltenago", "Quiché", "Retalhuleu", "Sacatepéquez", "San Marcos", "Santa Rosa", "Sololá", "Suchitepéquez", "Totonicapán", "Zacapa", " " }));
+        jComboBox_sucursal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_sucursalActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBox_sucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 230, 30));
         getContentPane().add(jLabel_fondoadmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBox_sucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_sucursalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox_sucursalActionPerformed
 
     /**
      * @param args the command line arguments

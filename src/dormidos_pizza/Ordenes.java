@@ -48,7 +48,7 @@ public class Ordenes extends javax.swing.JFrame {
         jLabel_sucursal_ordenes.setText("SUCURSAL");
         getContentPane().add(jLabel_sucursal_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 100, 30));
 
-        jComboBox_sucursal_ordenes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_sucursal_ordenes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alta Verapaz", "Baja Verapaz", "Chimaltenango", "Chiquimula", "El Progreso", "Escuintla", "Guatemala", "Huehuetenango", "Izabal", "Jalapa", "Jutiapa", "Petén", "Quetzaltenago", "Quiché", "Retalhuleu", "Sacatepéquez", "San Marcos", "Santa Rosa", "Sololá", "Suchitepéquez", "Totonicapán", "Zacapa", " " }));
         getContentPane().add(jComboBox_sucursal_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 230, 30));
 
         jLabel_pizza_ordenes.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
