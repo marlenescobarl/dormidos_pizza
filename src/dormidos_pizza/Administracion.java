@@ -1,21 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dormidos_pizza;
 
-/**
- *
- * @author escobarlima
- */
-public class Administracion extends javax.swing.JFrame {
+import javax.swing.WindowConstants;
 
-    /**
-     * Creates new form Administracion
-     */
+
+public class Administracion extends javax.swing.JFrame {
+    
+    String admin;
+
     public Administracion() {
         initComponents();
+        
+        setResizable(false);
+        setLocationRelativeTo(null);
+        
+        //evitar que el programa termine al cerrar la ventana
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -27,18 +27,71 @@ public class Administracion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel_sucursal = new javax.swing.JLabel();
+        jComboBox_sucursal = new javax.swing.JComboBox<>();
+        jLabel_precio = new javax.swing.JLabel();
+        jLabel_pizzaname = new javax.swing.JLabel();
+        jLabel_descripcion = new javax.swing.JLabel();
+        jTextField_pizzaname = new javax.swing.JTextField();
+        jTextField_precio = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea_descripcion = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable_tabla = new javax.swing.JTable();
+        jButton_crear = new javax.swing.JButton();
+        jLabel_fondoadmin = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel_sucursal.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
+        jLabel_sucursal.setText("SUCURSAL");
+        getContentPane().add(jLabel_sucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 100, 30));
+
+        jComboBox_sucursal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox_sucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 230, 50));
+
+        jLabel_precio.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
+        jLabel_precio.setText("PRECIO");
+        getContentPane().add(jLabel_precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 100, 30));
+
+        jLabel_pizzaname.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
+        jLabel_pizzaname.setText("PIZZA");
+        getContentPane().add(jLabel_pizzaname, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 100, 30));
+
+        jLabel_descripcion.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
+        jLabel_descripcion.setText("DESCRIPCION");
+        getContentPane().add(jLabel_descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 140, 30));
+        getContentPane().add(jTextField_pizzaname, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 240, 40));
+        getContentPane().add(jTextField_precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 100, 40));
+
+        jTextArea_descripcion.setColumns(20);
+        jTextArea_descripcion.setRows(5);
+        jScrollPane1.setViewportView(jTextArea_descripcion);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 330, 90));
+
+        jTable_tabla.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
+        jTable_tabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "NOMBRE", "DESCRIPCION", "PRECIO"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable_tabla);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 470, 140));
+
+        jButton_crear.setBackground(new java.awt.Color(255, 153, 102));
+        jButton_crear.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 15)); // NOI18N
+        jButton_crear.setText("CREAR");
+        getContentPane().add(jButton_crear, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 100, 40));
+        getContentPane().add(jLabel_fondoadmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +132,18 @@ public class Administracion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_crear;
+    private javax.swing.JComboBox<String> jComboBox_sucursal;
+    private javax.swing.JLabel jLabel_descripcion;
+    private javax.swing.JLabel jLabel_fondoadmin;
+    private javax.swing.JLabel jLabel_pizzaname;
+    private javax.swing.JLabel jLabel_precio;
+    private javax.swing.JLabel jLabel_sucursal;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable_tabla;
+    private javax.swing.JTextArea jTextArea_descripcion;
+    private javax.swing.JTextField jTextField_pizzaname;
+    private javax.swing.JTextField jTextField_precio;
     // End of variables declaration//GEN-END:variables
 }

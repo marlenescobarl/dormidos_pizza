@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dormidos_pizza;
+
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -16,6 +14,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
      */
     public VentanaPrincipal() {
         initComponents();
+        setResizable(false);
+        setLocationRelativeTo(null);
+        
+        //evitar que el programa termine al cerrar la ventana
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -33,6 +36,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
+        jLabel_logo = new javax.swing.JLabel();
+        jButton_administracion = new javax.swing.JButton();
+        jButton_ordenes = new javax.swing.JButton();
+        jLabel_fondo = new javax.swing.JLabel();
 
         jMenu1.setText("jMenu1");
 
@@ -49,8 +56,32 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel_logo.setFont(new java.awt.Font("Arial Black", 1, 20)); // NOI18N
+        jLabel_logo.setForeground(new java.awt.Color(255, 102, 0));
+        jLabel_logo.setText("DORMIDOS PIZZA");
+        getContentPane().add(jLabel_logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+
+        jButton_administracion.setText("ADMINISTRACION");
+        jButton_administracion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_administracionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton_administracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 160, 50));
+
+        jButton_ordenes.setText("ORDENES");
+        getContentPane().add(jButton_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 160, 50));
+        getContentPane().add(jLabel_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 390));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton_administracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_administracionActionPerformed
+
+        //OBJETO PARA ABRIR LA VENTANA DE ADMINISTRACION
+        Administracion administracion = new Administracion();
+        administracion.setVisible(true);
+    }//GEN-LAST:event_jButton_administracionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -88,6 +119,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton_administracion;
+    private javax.swing.JButton jButton_ordenes;
+    private javax.swing.JLabel jLabel_fondo;
+    private javax.swing.JLabel jLabel_logo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
