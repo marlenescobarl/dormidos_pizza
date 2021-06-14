@@ -55,7 +55,7 @@ public class Ordenes extends javax.swing.JFrame {
         jLabel_pizza_ordenes.setText("PIZZA");
         getContentPane().add(jLabel_pizza_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 100, 30));
 
-        jComboBox_pizza_ordenes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_pizza_ordenes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hauwaiana", "De piña", "Doble queso", "Pepperoni" }));
         getContentPane().add(jComboBox_pizza_ordenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 230, 30));
 
         jLabel_descripcion_ordenes.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 16)); // NOI18N
